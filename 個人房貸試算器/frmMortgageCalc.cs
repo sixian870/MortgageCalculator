@@ -36,7 +36,7 @@ namespace 個人房貸試算器
             {
                 if (!isDownPercent || downPercent < 0 || downPercent > 100)
                 {
-                    MessageBox.Show("請輸入正確的頭期款百分比（0~100%）", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("請輸入正確的自備款百分比（0~100%）", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDownPercent.Focus();
                     return;
                 }
@@ -46,14 +46,14 @@ namespace 個人房貸試算器
             {
                 if (!isDownAmount || downAmount < 0 || downAmount >= housePrice)
                 {
-                    MessageBox.Show("請輸入正確的頭期款金額（必須為正數且小於房屋總價）", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("請輸入正確的自備款金額（必須為正數且小於房屋總價）", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDownAmount.Focus();
                     return;
                 }
                 downPayment = downAmount * 10000;
             }
 
-            if (!isInterestRate || interestRate <= 0 || interestRate > 20)
+            if (!isInterestRate || interestRate < 0 || interestRate > 20)
             {
                 MessageBox.Show("請輸入合理的年利率 (0~20%)", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtInterestRate.Focus();
@@ -66,6 +66,11 @@ namespace 個人房貸試算器
             {
                 MessageBox.Show("寬限期必須小於貸款年限", "邏輯錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+            if (gracePeriod > 0)
+            {
+                lblPS.Text = $"✨小提醒：寬限期(前{gracePeriod}年)內每月只需負擔利息；試算結果顯示之每月應繳額為寬限期過後({loanTerm - gracePeriod}年)恢復本息攤還之數值。";
             }
 
             decimal loanAmount = (housePrice * 10000) - downPayment; // 貸款總金額 = 房屋總價 - 自備款
@@ -114,7 +119,6 @@ namespace 個人房貸試算器
                 txtDownPercent.Enabled = true;
                 txtDownAmount.Enabled = false;
                 txtDownAmount.Clear();
-                txtDownPercent.Focus();
             }
         }
 
@@ -125,7 +129,6 @@ namespace 個人房貸試算器
                 txtDownAmount.Enabled = true;
                 txtDownPercent.Enabled = false;
                 txtDownPercent.Clear();
-                txtDownAmount.Focus();
             }
         }
 
@@ -141,7 +144,6 @@ namespace 個人房貸試算器
 
             rdoDownPercent.Checked = true;
             txtDownPercent.Enabled = true;
-            rdoDownAmount.Checked = false;
             txtDownAmount.Enabled = false;
 
             lblLoanAmount.Text = "$ 0";
@@ -150,8 +152,16 @@ namespace 個人房貸試算器
             lblFirstPrincipal.Text = "$ 0";
             lblTotalInterest.Text = "$ 0";
             lblTotalRepayment.Text = "$ 0";
+            lblPS.Text = "✨目前無寬限期，全期採本息平均攤還。";
 
             txtHousePrice.Focus();
+        }
+
+        private void frmMortgageCalc_Load(object sender, EventArgs e)
+        {
+            rdoDownPercent.Checked = true;
+            txtDownPercent.Enabled = true;
+            txtDownAmount.Enabled = false;
         }
     }
 }
