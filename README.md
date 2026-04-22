@@ -34,7 +34,7 @@
     * **貸款年限(年)**：預設為 30，可手動輸入或透過 **鍵盤上下鍵/點擊箭頭** 修改數值，參考市面實際貸款年限將範圍設成 0~50。
     * **寬限期(年)**：預設為 0，可手動輸入或透過 **鍵盤上下鍵/點擊箭頭** 修改數值，參考市面實際寬限期將範圍設成 0~10，且必須小於貸款年限。
       
-      <img width="500" height="596" alt="螢幕擷取畫面 2026-04-06 182931" src="https://github.com/user-attachments/assets/d51dd151-e146-4f83-9218-894c6bf7e7fc" />
+      <img width="80%" alt="螢幕擷取畫面 2026-04-06 182931" src="https://github.com/user-attachments/assets/d51dd151-e146-4f83-9218-894c6bf7e7fc" />
 
 
 2.  **欄位跳轉與錯誤提醒**：
@@ -42,7 +42,7 @@
     * 彈出錯誤警告視窗時，可直接按下 **`Enter` 鍵** 快速關閉彈窗並返回修正，游標會自動聚焦回錯誤的欄位。
     * 以下是五種可能發生的錯誤提醒:
 
-      <img width="250" height="596" alt="螢幕擷取畫面 2026-04-06 185405" src="https://github.com/user-attachments/assets/e5ce5fd0-aae4-4baa-851e-8f46ae447ecd" /> <img width="250" height="596" alt="螢幕擷取畫面 2026-04-06 185435" src="https://github.com/user-attachments/assets/ade30195-d055-4c62-8d38-78e148f3aae3" /> <img width="250" height="590" alt="螢幕擷取畫面 2026-04-06 185946" src="https://github.com/user-attachments/assets/fdf64093-4911-48cd-a534-28fa853c70ea" /> <img width="250" height="595" alt="螢幕擷取畫面 2026-04-06 185509" src="https://github.com/user-attachments/assets/32d1ca76-5009-45c8-ad39-1c37235b4413" /> <img width="250" height="596" alt="螢幕擷取畫面 2026-04-06 185545" src="https://github.com/user-attachments/assets/75d563e5-0de4-47b2-8224-9f248169018c" />
+      <img width="50%" alt="螢幕擷取畫面 2026-04-06 185405" src="https://github.com/user-attachments/assets/e5ce5fd0-aae4-4baa-851e-8f46ae447ecd" /> <img width="50%" alt="螢幕擷取畫面 2026-04-06 185435" src="https://github.com/user-attachments/assets/ade30195-d055-4c62-8d38-78e148f3aae3" /> <img width="50%" alt="螢幕擷取畫面 2026-04-06 185946" src="https://github.com/user-attachments/assets/fdf64093-4911-48cd-a534-28fa853c70ea" /> <img width="50%" alt="螢幕擷取畫面 2026-04-06 185509" src="https://github.com/user-attachments/assets/32d1ca76-5009-45c8-ad39-1c37235b4413" /> <img width="50%" alt="螢幕擷取畫面 2026-04-06 185545" src="https://github.com/user-attachments/assets/75d563e5-0de4-47b2-8224-9f248169018c" />
 
 3.  **執行計算**：
     * 使用滑鼠點擊、`Tab` 切換至按鈕按「空白鍵」，或在視窗任何位置直接按下 `Enter 鍵 即可執行。
@@ -51,12 +51,12 @@
     * 在「計算結果」區查看：貸款總金額、首期利息、首期本本金、每月應繳額（寬限期後）、總利息支出及總還款金額。
     * 以下是兩種有無寬限期的結果差異:
       
-      <img width="400" height="593" alt="螢幕擷取畫面 2026-04-06 191159" src="https://github.com/user-attachments/assets/6e2c385b-6044-492d-8e9c-8336412f125f" /> <img width="400" height="594" alt="螢幕擷取畫面 2026-04-06 191232" src="https://github.com/user-attachments/assets/ff81ba17-3cc1-42ec-9d0e-a77f0e6db53a" />
+      <img width="80%" alt="螢幕擷取畫面 2026-04-06 191159" src="https://github.com/user-attachments/assets/6e2c385b-6044-492d-8e9c-8336412f125f" /> <img width="80%" alt="螢幕擷取畫面 2026-04-06 191232" src="https://github.com/user-attachments/assets/ff81ba17-3cc1-42ec-9d0e-a77f0e6db53a" />
 
 6.  **清除結果**：
     * 點擊「清除」按鈕或 `Tab` 切換至按鈕按「空白鍵」，所有輸入欄位將恢復預設值，並將焦點重新回到「房屋總價」。
 
-      <img width="500" height="593" alt="螢幕擷取畫面 2026-04-06 200745" src="https://github.com/user-attachments/assets/2ced3b11-1a16-4911-b080-7a15aff1ba1d" />
+      <img width="80%" alt="螢幕擷取畫面 2026-04-06 200745" src="https://github.com/user-attachments/assets/2ced3b11-1a16-4911-b080-7a15aff1ba1d" />
 
 
 
